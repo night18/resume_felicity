@@ -250,36 +250,6 @@ function main() {
       targets: '.ml4 .letters-5, .ml4 .line',
       opacity: 0,
       easing: "easeOutExpo",
-    })
-    .add({
-      targets: '.ml4 .line',
-      scaleY: [0,1],
-      opacity: [0.5,1],
-      easing: "easeOutExpo",
-      duration: 700
-    })
-    .add({
-      targets: '.ml4 .line',
-      translateX: [0,$(".ml4 .letters-6").width()],
-      easing: "easeOutExpo",
-      duration: 700,
-      delay: 100
-    }).add({
-      targets: '.ml4 .letters-6 .letter',
-      opacity: [0,1],
-      easing: "easeOutExpo",
-      duration: 600,
-      offset: '-=775',
-      delay: function(el, i) {
-        return 34 * (i+1)
-      }
-    })
-    .add({
-      targets: '.ml4',
-      opacity: 0,
-      duration: 500,
-      easing: "easeOutExpo",
-      delay: 500
     });
 
     anime.timeline({loop: true})
